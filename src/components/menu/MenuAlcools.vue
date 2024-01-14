@@ -1,10 +1,9 @@
 <template>
-  <ul class="ml-5 grid grid-cols-1 md:grid-cols-2">
-    <li v-for="(alcool, idx) in alcools" :key="idx"
-      class="p-1 flex-none">
+  <div class="ml-5 gap-1 grid grid-cols-1 md:grid-cols-2">
+    <div v-for="(alcool, idx) in alcools" :key="idx">
         <h4>{{ alcool.name }} | {{ $filters.currency(alcool.price) }}</h4>
-    </li>
-  </ul>
+    </div>
+  </div>
 </template>
 
 <script>
