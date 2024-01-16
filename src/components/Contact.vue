@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen w-screen flex flex-col items-center justify-center" id="contact">
+    <div class="h-full w-full flex flex-col items-center justify-center" id="contact">
         <div class="adress-container">
             <h3 class="text-xl text-center font-bold">Coxyburger</h3>
             <p>Rue du Baron d'Obin 132</p>

@@ -1,14 +1,12 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App" class="content"/>
+  <div class="relative ">
+    <img src="/public/images/homeimage.jpg" 
+      alt="Home image" 
+      class="w-full h-1/3 md:1/2 lg:h-2/3">
+    </img>
+    <div class="absolute text-5xl text-gray-500 top-1/3 left-1/3 -translate-x-1/2">  
+    Bienvenue chez Coxyburger, là où la gourmandise prend tout son sens.
+  </div>
+  </div>
+  
 </template>
-
-<script>
-import HelloWorld from './HelloWorld.vue';
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
-  },
-};
-</script>

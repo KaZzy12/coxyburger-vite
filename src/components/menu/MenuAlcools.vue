@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-5 gap-1 grid grid-cols-1 md:grid-cols-2">
+  <div class="mt-5 ml-5 gap-1 grid grid-cols-1 md:grid-cols-2">
     <div v-for="(alcool, idx) in alcools" :key="idx">
         <h4>{{ alcool.name }} | {{ $filters.currency(alcool.price) }}</h4>
     </div>
