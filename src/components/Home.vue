@@ -1,6 +1,6 @@
 <template>
   <div class="relative ">
-    <img src="/public/images/homeimage.jpg" 
+    <img src="/src/assets/homeimage.jpg" 
       alt="Home image" 
       class="w-full h-1/3 md:1/2 lg:h-2/3">
     </img>
