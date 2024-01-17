@@ -1,14 +1,16 @@
 <template>
-    <div class="h-full w-full flex flex-col items-center justify-center" id="contact">
-        <div class="adress-container">
-            <h3 class="text-xl text-center font-bold">Coxyburger</h3>
-            <p>Rue du Baron d'Obin 132</p>
-            <p>4219 Wasseiges</p>
-            <p>Ouvert 7/7 de 17h30 à 21h</p>
-            <p>et le mercredi de 11h30 à 13h30</p>
-            <p>0489/18.45.70</p>
+  <section id="contact" class="-z-50 -mt-[104px] lg:-mt-[136px] bg-cover h-screen w-screen" style=" background-image: url(images/batiment.png);">
+    <div class="h-full w-full flex flex-col items-center justify-center">
+      <div class="bg-gray-100/70 rounded-2xl absolute">
+        <div>
+            <h3 class="text-2xl text-center font-bold">Coxyburger</h3>
+            <p class="text-lg text-center">Rue du Baron d'Obin 132</p>
+            <p class="text-lg text-center">4219 Wasseiges</p>
+            <p class="text-lg text-center">Ouvert 7/7 de 17h30 à 21h</p>
+            <p class="text-lg text-center">et le mercredi de 11h30 à 13h30</p>
+            <p class="text-lg text-center">0489/18.45.70</p>
         </div>
-        <div class="flex flex-row">
+        <div class="flex flex-row justify-center">
             <a href="https://maps.app.goo.gl/aLX5KuAphy4vmi5M8" class="hover:brightness-75">
               <img class="w-12" src="../assets/maps.png">
             </a>
@@ -22,7 +24,9 @@
               <img class="w-12" src="../assets/whatsapp.png">
             </a>
         </div>
+      </div>
     </div>
+  </section>
 </template>
 
 <script>

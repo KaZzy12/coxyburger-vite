@@ -1,11 +1,11 @@
 <template>
-    <nav class="navbar flex w-auto p-3 items-center justify-between border-x-2 rounded-xl text-white text-xl">
+    <nav class="navbar flex w-auto p-3 items-center justify-between border-x-2 rounded-xl text-white text-xl sticky">
       <div class="flex flex-wrap">
         <router-link
          :to="{name: 'Home'}"
          class="flex items-center space-x-1 rtl:space-x-reverse">
          <img class="h-20" src="../assets/coxyburger.png">
-         <span>Coxyburger</span>
+         <span class="!text-white">Coxyburger</span>
         </router-link>
       </div>
       <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -39,5 +39,8 @@
 <style scoped>
 .navbar {
   background: linear-gradient(180deg, #234b90 80%, #ffffff 81%, #922028 15%);
+}
+.router-link-active {
+    @apply text-red-500;
 }
 </style>

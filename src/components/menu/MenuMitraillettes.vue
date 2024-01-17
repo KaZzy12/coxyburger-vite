@@ -1,9 +1,9 @@
 <template>
-  <ul>
-    <li v-for="(mitraillette, idx) in mitraillettes" :key="idx">
-      <h4>{{ mitraillette.name }} | {{ $filters.currency(mitraillette.price) }}</h4>
-    </li>
-  </ul>
+  <div class="mt-5 w-screen gap-1 grid grid-cols-1 md:grid-cols-2">
+    <div v-for="(mitraillette, idx) in mitraillettes" :key="idx">
+      <h4 class="text-lg font-bold text-center">{{ mitraillette.name }} | {{ $filters.currency(mitraillette.price) }}</h4>
+    </div>
+  </div>
 </template>
 
 <script>

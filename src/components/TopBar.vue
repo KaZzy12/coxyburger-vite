@@ -1,6 +1,6 @@
 <!-- TopBar.vue -->
 <template>
-  <nav class="h-8 bg-gray-200 border-sky-100 hidden lg:block">
+  <nav class="h-8 bg-gray-200 border-sky-100 hidden lg:block sticky">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-1 text-gray-500">
       <a href="https://maps.app.goo.gl/aLX5KuAphy4vmi5M8" class="flex items-center space-x-1 rtl:space-x-reverse hover:text-gray-900">
         <img class="bottom-1 h-5" src="../assets/map_pin_icon.png">
