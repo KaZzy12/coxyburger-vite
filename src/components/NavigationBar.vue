@@ -34,7 +34,7 @@
       </div>
     </nav>
     <section id="mobile-menu" 
-     class="absolute z-10 top-0 bg-[#234b90] sticky w-full h-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
+     class="z-10 top-0 bg-[#234b90] sticky w-full h-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
       <button class="text-white text-7xl self-end px-6">
         &times;
       </button>
