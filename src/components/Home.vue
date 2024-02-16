@@ -1,12 +1,9 @@
 <template>
-  <div class="relative ">
-    <img src="/src/assets/homeimage.jpg" 
-      alt="Home image" 
-      class="w-full h-1/3 md:1/2 lg:h-2/3">
-    </img>
-    <div class="absolute text-5xl text-[#234b90] top-1/3 left-1/3 -translate-x-1/2">  
-      Bienvenue chez Coxyburger, là où la gourmandise prend tout son sens.
+  <section id="contact" class="-z-50 -mt-[104px] lg:-mt-[136px] bg-cover h-screen w-screen" style=" background-image: url(images/homeimage.jpg);">
+    <div class="h-full w-full flex flex-col items-center justify-center">
+      <div class="absolute text-5xl text-white drop-shadow-2xl">  
+        Bienvenue chez Coxyburger, là où la gourmandise prend tout son sens.
+      </div>
     </div>
-  </div>
-  
+  </section>
 </template>

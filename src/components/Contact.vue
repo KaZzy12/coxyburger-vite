@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="-z-50 -mt-[104px] lg:-mt-[136px] bg-cover h-screen w-screen" style=" background-image: url(images/batiment.png);">
+  <section id="contact" class="-z-50 -mt-[104px] lg:-mt-[136px] bg-cover h-screen w-screen" style=" background-image: url(images/batiment.JPG);">
     <div class="h-full w-full flex flex-col items-center justify-center">
       <div class="bg-gray-100/70 rounded-2xl absolute">
         <div>
