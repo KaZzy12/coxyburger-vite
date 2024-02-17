@@ -1,5 +1,5 @@
 <template>
-    <div id="carte">
+    <section id="carte" class="bg-gray-200 min-h-screen min-w-fit">
         <div class="p-2">
             <ul class="text-xl mr-auto md:w-screen flex flex-wrap justify-around gap-4">
                 <li>
@@ -75,7 +75,7 @@
             </ul>
         </div>
         <router-view v-if="$route.matched.length"></router-view>
-    </div>
+    </section>
 </template>
 
 <script>
