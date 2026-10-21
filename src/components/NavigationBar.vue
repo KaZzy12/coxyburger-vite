@@ -141,10 +141,10 @@ onBeforeUnmount(() => {
           </button>
         </div>
 
-        <nav class="flex flex-col px-4 text-2xl font-semibold" aria-label="Navigation mobile">
+        <nav class="flex flex-col text-2xl font-semibold" aria-label="Navigation mobile">
           <router-link
             :to="{ name: 'Home' }"
-            class="drawer-link border-b border-white/15 py-4 transition-colors hover:text-red-300"
+            class="drawer-link border-b border-white/15 px-4 py-4 transition-colors hover:bg-white/10"
           >
             Accueil
           </router-link>
@@ -152,7 +152,7 @@ onBeforeUnmount(() => {
             v-for="link in links"
             :key="link.label"
             :to="link.to"
-            class="drawer-link border-b border-white/15 py-4 transition-colors hover:text-red-300"
+            class="drawer-link border-b border-white/15 px-4 py-4 transition-colors hover:bg-white/10"
           >
             {{ link.label }}
           </router-link>
@@ -189,8 +189,8 @@ onBeforeUnmount(() => {
   border-radius: 9999px;
   background-color: #922028;
 }
-.drawer-link.router-link-exact-active,
+/* Bordeaux as background, not text: bordeaux text on the blue drawer is ~1:1 contrast. */
 .drawer-link.router-link-active {
-  color: #fca5a5;
+  background-color: #922028;
 }
 </style>
