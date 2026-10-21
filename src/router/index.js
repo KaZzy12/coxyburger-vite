@@ -3,7 +3,7 @@ import {
   createWebHistory,
 } from 'vue-router';
 
-import Burgers from '../components/Burgers.vue';
+
 import Carte from '../components/Carte.vue';
 import Contact from '../components/Contact.vue';
 import Home from '../components/Home.vue';
@@ -11,6 +11,7 @@ import MenuAlcools from '../components/menu/MenuAlcools.vue';
 import MenuBrochettes from '../components/menu/MenuBrochettes.vue';
 import MenuFrites from '../components/menu/MenuFrites.vue';
 import MenuHamburgers from '../components/menu/MenuHamburgers.vue';
+import MenuHamburgersSpeciaux from '../components/menu/MenuHamburgersSpeciaux.vue';
 import MenuMitraillettes from '../components/menu/MenuMitraillettes.vue';
 import MenuPetiteRestauration from '../components/menu/MenuPetiteRestauration.vue';
 import MenuSauces from '../components/menu/MenuSauces.vue';
@@ -27,11 +28,7 @@ export default createRouter({
       name: 'Home',
       component: Home,
     },
-    {
-      path: '/burgers',
-      name: 'Burgers',
-      component: Burgers,
-    },
+
     {
       path: '/test',
       name: 'Test',
@@ -41,7 +38,13 @@ export default createRouter({
       path: '/carte',
       name: 'Carte',
       component: Carte,
+      redirect: { name: 'BrowseHamburgersSpeciaux' },
       children: [
+        {
+          name: 'BrowseHamburgersSpeciaux',
+          path: 'hamburgers-speciaux',
+          component: MenuHamburgersSpeciaux,
+        },
         {
           name: 'BrowseAlcools',
           path: 'alcools',

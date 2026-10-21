@@ -14,11 +14,7 @@
         </button>
         <nav class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row rtl:space-x-reverse md:mt-0 md:border-0">
-            <li>
-              <router-link class="inline-block md:mr-4 hover:text-red-500" :to="{name: 'Burgers'}" exact>
-                Burgers
-              </router-link>
-            </li>
+
             <li>
               <router-link class="inline-block md:mr-4 hover:text-red-500" :to="{name: 'Carte'}" exact>
                 Carte
@@ -44,11 +40,7 @@
          class="text-white w-full text-center py-6 hover:opacity-90 hover:text-red-500">
           Accueil
         </router-link>
-        <router-link 
-         :to="{name: 'Burgers'}" exact
-         class="text-white w-full text-center py-6 hover:opacity-90 hover:text-red-500">
-          Burgers
-        </router-link>
+
         <router-link 
          :to="{name: 'Carte'}" exact
          class="text-white w-full text-center py-6 hover:opacity-90 hover:text-red-500">

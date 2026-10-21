@@ -3,6 +3,7 @@ import { nextTick, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 
 const categories = [
+  { label: 'Hamburgers spéciaux', route: 'BrowseHamburgersSpeciaux' },
   { label: 'Frites', route: 'BrowseFrites' },
   { label: 'Hamburgers', route: 'BrowseHamburgers' },
   { label: 'Mitraillettes', route: 'Browsemitraillettes' },
@@ -60,9 +61,6 @@ watch(
       </ul>
     </nav>
 
-    <router-view v-if="$route.matched.length > 1"></router-view>
-    <p v-else class="px-4 py-16 text-center text-gray-500">
-      Choisissez une catégorie pour découvrir la carte.
-    </p>
+    <router-view></router-view>
   </section>
 </template>

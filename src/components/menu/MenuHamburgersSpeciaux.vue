@@ -1,6 +1,6 @@
 <script setup>
-import { burgers } from '../burgers/burgers';
-import BurgerCard from './BurgerCard.vue';
+import { burgers } from '../../burgers/burgers';
+import BurgerCard from '../BurgerCard.vue';
 </script>
 
 <template>
