@@ -1,79 +1,196 @@
-<template>
-    <nav class="navbar flex p-3 items-center justify-between md:border-x-2 md:rounded-xl text-white text-xl sticky">
-      <div class="flex flex-wrap">
-        <router-link
-         :to="{name: 'Home'}"
-         class="flex items-center space-x-1 rtl:space-x-reverse">
-         <img class="h-20" src="../assets/coxyburger.png">
-         <span class="!text-white">Coxyburger</span>
-        </router-link>
-      </div>
-      <div>
-        <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer">
-          &#9776
-        </button>
-        <nav class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row rtl:space-x-reverse md:mt-0 md:border-0">
+<script setup>
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 
-            <li>
-              <router-link class="inline-block md:mr-4 hover:text-red-500" :to="{name: 'Carte'}" exact>
-                Carte
-              </router-link>
-            </li>
-            <li>
-              <router-link class="inline-block hover:text-red-500" :to="{name: 'Contact'}" exact>
-                Contact
+const PHONE_LABEL = '0489 18 45 70';
+const PHONE_HREF = 'tel:+32489184570';
+const MD_BREAKPOINT = 768;
+
+const route = useRoute();
+const isMenuOpen = ref(false);
+const menuButton = ref(null);
+const closeButton = ref(null);
+
+const links = [
+  { label: 'Carte', to: { name: 'Carte' } },
+  { label: 'Contact', to: { name: 'Contact' } },
+];
+
+const openMenu = async () => {
+  isMenuOpen.value = true;
+  await nextTick();
+  closeButton.value?.focus();
+};
+
+const closeMenu = ({ restoreFocus = false } = {}) => {
+  if (!isMenuOpen.value) return;
+  isMenuOpen.value = false;
+  if (restoreFocus) menuButton.value?.focus();
+};
+
+const onKeydown = (event) => {
+  if (event.key === 'Escape') closeMenu({ restoreFocus: true });
+};
+
+const onResize = () => {
+  if (window.innerWidth >= MD_BREAKPOINT) closeMenu();
+};
+
+// Prevent the page from scrolling behind the open drawer.
+watch(isMenuOpen, (open) => {
+  document.body.classList.toggle('overflow-hidden', open);
+});
+
+watch(() => route.fullPath, () => closeMenu());
+
+onMounted(() => {
+  window.addEventListener('keydown', onKeydown);
+  window.addEventListener('resize', onResize);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onKeydown);
+  window.removeEventListener('resize', onResize);
+  document.body.classList.remove('overflow-hidden');
+});
+</script>
+
+<template>
+  <header class="relative z-20 border-b-[6px] border-burgundy bg-[#234b90] text-white shadow-md">
+    <div class="mx-auto flex h-20 max-w-screen-xl items-center justify-between gap-4 px-4 md:h-[100px]">
+      <!-- Left: brand -->
+      <router-link
+        :to="{ name: 'Home' }"
+        class="flex items-center gap-2 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:gap-4"
+        aria-label="Coxyburger - Accueil"
+      >
+        <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white p-1 shadow-lg ring-4 ring-burgundy md:h-[84px] md:w-[84px]">
+          <img class="h-full w-full object-contain" src="../assets/coxyburger.png" alt="">
+        </span>
+        <span class="text-xl font-extrabold uppercase leading-none tracking-wider !text-white sm:text-2xl md:text-3xl">
+          Coxyburger
+        </span>
+      </router-link>
+
+      <!-- Right: menu -->
+      <div class="flex items-center justify-end">
+        <button
+          ref="menuButton"
+          type="button"
+          class="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-lg transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white md:hidden"
+          aria-label="Ouvrir le menu"
+          aria-controls="mobile-menu"
+          :aria-expanded="isMenuOpen"
+          @click="openMenu"
+        >
+          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <nav class="hidden md:block" aria-label="Navigation principale">
+          <ul class="flex items-center gap-8 text-lg font-semibold uppercase tracking-wide">
+            <li v-for="link in links" :key="link.label">
+              <router-link
+                :to="link.to"
+                class="nav-link relative inline-block py-2 transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
+                {{ link.label }}
               </router-link>
             </li>
           </ul>
         </nav>
       </div>
-    </nav>
-    <section id="mobile-menu" 
-     class="z-10 top-0 bg-[#234b90] sticky w-full h-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
-      <button class="text-white text-7xl self-end px-6">
-        &times;
-      </button>
-      <nav class="flex flex-col h-full items-center py-8" aria-label="mobile">
-        <router-link
-         :to="{name: 'Home'}"
-         class="text-white w-full text-center py-6 hover:opacity-90 hover:text-red-500">
-          Accueil
-        </router-link>
+    </div>
 
-        <router-link 
-         :to="{name: 'Carte'}" exact
-         class="text-white w-full text-center py-6 hover:opacity-90 hover:text-red-500">
-          Carte
-        </router-link>
-        <router-link 
-         :to="{name: 'Contact'}" exact
-         class="text-white w-full text-center py-6 hover:opacity-90 hover:text-red-500">
-          Contact
-        </router-link>
-      </nav>
-    </section>
+    <!-- Mobile drawer (opens from the right, like the menu button) -->
+    <Transition
+      enter-active-class="transition-opacity duration-200 ease-out motion-reduce:transition-none"
+      leave-active-class="transition-opacity duration-150 ease-in motion-reduce:transition-none"
+      enter-from-class="opacity-0"
+      leave-to-class="opacity-0"
+    >
+      <div v-if="isMenuOpen" class="fixed inset-0 z-50 bg-black/60 md:hidden" @click="closeMenu({ restoreFocus: true })"></div>
+    </Transition>
+    <Transition
+      enter-active-class="transition-transform duration-200 ease-out motion-reduce:transition-none"
+      leave-active-class="transition-transform duration-150 ease-in motion-reduce:transition-none"
+      enter-from-class="translate-x-full"
+      leave-to-class="translate-x-full"
+    >
+      <aside
+        v-if="isMenuOpen"
+        id="mobile-menu"
+        class="fixed inset-y-0 right-0 z-50 flex w-[85%] max-w-sm flex-col overflow-y-auto border-l-4 border-burgundy bg-[#234b90] shadow-2xl md:hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
+      >
+        <div class="flex h-20 shrink-0 items-center justify-between px-4">
+          <span class="text-lg font-extrabold uppercase tracking-wider">Menu</span>
+          <button
+            ref="closeButton"
+            type="button"
+            class="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-lg transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+            aria-label="Fermer le menu"
+            @click="closeMenu({ restoreFocus: true })"
+          >
+            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col px-4 text-2xl font-semibold" aria-label="Navigation mobile">
+          <router-link
+            :to="{ name: 'Home' }"
+            class="drawer-link border-b border-white/15 py-4 transition-colors hover:text-red-300"
+          >
+            Accueil
+          </router-link>
+          <router-link
+            v-for="link in links"
+            :key="link.label"
+            :to="link.to"
+            class="drawer-link border-b border-white/15 py-4 transition-colors hover:text-red-300"
+          >
+            {{ link.label }}
+          </router-link>
+        </nav>
+
+        <div class="mt-auto space-y-4 p-4 text-base text-white/90">
+          <a
+            :href="PHONE_HREF"
+            class="block underline-offset-4 hover:underline"
+          >
+            {{ PHONE_LABEL }}
+          </a>
+          <a
+            href="https://maps.app.goo.gl/aLX5KuAphy4vmi5M8"
+            class="block underline-offset-4 hover:underline"
+          >
+            Rue du Baron d'Obin 132 - 4219 Wasseiges
+          </a>
+          <p>Mardi - Dimanche : 17h30 - 21h<br>Mercredi : 11h30 - 13h30</p>
+        </div>
+      </aside>
+    </Transition>
+  </header>
 </template>
-<script defer>
-  const initApp = () => {
-    const hamburgerBtn = document.getElementById('hamburger-button')
-    const mobileMenu = document.getElementById('mobile-menu')
-    const toggleMenu = () => {
-      mobileMenu.classList.toggle('hidden')
-      mobileMenu.classList.toggle('flex')
-    }
-    hamburgerBtn.addEventListener('click', toggleMenu)
-    mobileMenu.addEventListener('click', toggleMenu)
-  }
-
-  document.addEventListener('DOMContentLoaded', initApp)
-</script>
 
 <style scoped>
-.navbar {
-  background: linear-gradient(180deg, #234b90 80%, #ffffff 81%, #922028 15%);
+.nav-link.router-link-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  border-radius: 9999px;
+  background-color: #922028;
 }
-.router-link-active {
-    @apply text-red-500;
+.drawer-link.router-link-exact-active,
+.drawer-link.router-link-active {
+  color: #fca5a5;
 }
 </style>
