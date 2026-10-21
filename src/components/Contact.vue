@@ -6,7 +6,7 @@
             <h3 class="text-2xl text-center font-bold">Coxyburger</h3>
             <p class="text-lg text-center">Rue du Baron d'Obin 132</p>
             <p class="text-lg text-center">4219 Wasseiges</p>
-            <p class="text-lg text-center">Ouvert 7/7 de 17h30 à 21h</p>
+            <p class="text-lg text-center">Ouvert du mardi au dimanche de 17h30 à 21h</p>
             <p class="text-lg text-center">et le mercredi de 11h30 à 13h30</p>
             <p class="text-lg text-center">0489/18.45.70</p>
         </div>

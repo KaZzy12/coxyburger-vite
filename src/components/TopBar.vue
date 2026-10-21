@@ -6,9 +6,9 @@
         <img class="bottom-1 h-5" src="../assets/map_pin_icon.png">
         <span class="self-center whitespace-nowrap">Rue du Baron d'Obin 132 - 4219 Wasseiges</span>
       </a>
-      <div class="flex items-center space-x-1 rtl:space-x-reverse">
+      <div class="flex items-center space-x-1 rtl:space-x-reverse gap-1">
         <img class="bottom-1 h-5" src="../assets/clock.png">
-        Lundi - dimanche: 17h30 - 21h | Mercredi 11h30 - 13h30
+        Mardi - Dimanche: 17h30 - 21h | Mercredi 11h30 - 13h30
       </div>
       <div class="flex items-center space-x-1 rtl:space-x-reverse">
         <img class="bottom-1 h-5" src="../assets/phone.png">
