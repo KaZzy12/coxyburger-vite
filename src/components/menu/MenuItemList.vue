@@ -1,7 +1,7 @@
 <template>
   <div class="w-screen flex justify-center px-2">
     <div class="mt-5 w-full max-w-4xl rounded-lg border-2 border-burgundy bg-white p-4 shadow-md">
-      <ul class="grid gap-x-10 gap-y-2" :style="{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }">
+      <ul class="grid grid-cols-1 gap-x-10 gap-y-2 md:[grid-template-columns:repeat(var(--cols),minmax(0,1fr))]" :style="{ '--cols': cols }">
         <li v-for="item in items" :key="item.id ?? item.name" class="flex items-baseline gap-2 text-lg">
           <span class="font-semibold">{{ item.name }}</span>
           <span class="flex-1 translate-y-[-0.05em] border-b-2 border-dotted border-gray-400" aria-hidden="true"></span>
