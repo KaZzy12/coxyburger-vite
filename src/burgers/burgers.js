@@ -18,7 +18,7 @@ export const burgers = [
     name: 'Cotchia',
     image: '/images/cotchia.png',
     description: 'Pain bagnat, hamburger de poisson, sauce cotchia au safran, une fusion délicate de saveurs marines et exotiques.',
-    isVege: true,
+    isVege: false,
   },
   {
     id: 4,
@@ -27,5 +27,19 @@ export const burgers = [
     description: 'Double viandes, une délicieuse aventure gourmande à chaque bouchée, une expérience irrésistible pour les amateurs de générosité',
     isVege: false,
   },
+  {
+    id: 5,
+    name: 'Hugo',
+    image: '/images/hugoburger.png',
+    description: 'Hugo',
+    isVege: false
+  },
+  {
+    id: 6,
+    name: 'Orval',
+    image: '/images/hugoburger.png',
+    description: 'Orval',
+    isVege: false
+  }
 ];
 export default burgers;

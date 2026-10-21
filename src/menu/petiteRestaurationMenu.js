@@ -17,22 +17,22 @@ export const petiteRestaurationMenu = [
   {
     id: 4,
     name: 'Assiette 2 boulettes liégeoise',
-    price: 13,
+    price: 16,
   },
   {
     id: 5,
     name: 'Assiette 2 boulettes tomate',
-    price: 13,
+    price: 16,
   },
   {
     id: 6,
     name: 'Assiette vol-au-vent',
-    price: 15,
+    price: 16,
   },
   {
     id: 7,
     name: 'Assiette carbonnades',
-    price: 15,
+    price: 16,
   },
   {
     id: 8,
