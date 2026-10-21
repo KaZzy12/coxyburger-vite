@@ -1,5 +1,4 @@
 <template>
-  <!-- Fills the viewport below the header (TopBar 32px on lg + navbar 80/100px + 6px border) -->
   <section
     class="relative isolate flex min-h-[calc(100svh-86px)] overflow-hidden bg-neutral-900 md:min-h-[calc(100svh-106px)] lg:min-h-[calc(100svh-138px)]"
     aria-labelledby="home-title"
@@ -10,7 +9,6 @@
       class="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center] md:object-center"
       fetchpriority="high"
     >
-    <!-- Keeps the text readable: darker where the text sits, lighter on the photo -->
     <div
       class="absolute inset-0 -z-10 bg-gradient-to-t from-black/85 via-black/55 to-black/25 md:bg-gradient-to-r md:from-black/80 md:via-black/50 md:to-black/10"
       aria-hidden="true"

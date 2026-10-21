@@ -189,7 +189,7 @@ onBeforeUnmount(() => {
   border-radius: 9999px;
   background-color: #922028;
 }
-/* Bordeaux as background, not text: bordeaux text on the blue drawer is ~1:1 contrast. */
+
 .drawer-link.router-link-active {
   background-color: #922028;
 }
