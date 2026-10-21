@@ -1,19 +1,15 @@
 <template>
-  <div class="w-screen grid place-items-center">
-    <div class="mt-5 gap-1 grid grid-cols-1 md:grid-cols-2">
-      <div v-for="(hamburger, idx) in hamburgers" :key="idx">
-        <h4 class="text-lg font-bold text-center">{{ hamburger.name }} | {{ $filters.currency(hamburger.price) }}</h4>
-      </div>
-    </div>
-  </div>
+  <MenuItemList :items="hamburgers" :cols="1" />
 </template>
 
 <script>
 /* eslint-disable import/no-named-as-default */
 import menu from '../../menu/menu';
+import MenuItemList from './MenuItemList.vue';
 
 export default {
-  name: 'MenuFrites',
+  name: 'MenuHamburgers',
+  components: { MenuItemList },
   data() {
     return { hamburgers: menu.hamburgers };
   },
