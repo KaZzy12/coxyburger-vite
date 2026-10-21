@@ -1,92 +1,68 @@
-<template>
-    <section id="carte" class="bg-gray-200 min-h-screen min-w-fit">
-        <div class="px-4 py-2">
-            <ul class="text-xl flex flex-wrap justify-around gap-4">
-                <li>
-                    <router-link 
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'BrowseFrites'}">
-                        Frites
-                    </router-link>
-                </li>
-                <li>
-                    <router-link
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'BrowseHamburgers'}">
-                        Hamburgers
-                    </router-link>
-                </li>
-                <li>
-                    <router-link
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'Browsemitraillettes'}">
-                        Mitraillettes
-                    </router-link>
-                </li>
-                <li>
-                    <router-link
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'BrowseBrochettes'}">
-                        Brochettes
-                    </router-link>
-                </li>
-                <li>
-                    <router-link
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'BrowseSnacks'}">
-                        Snacks
-                    </router-link>
-                </li>
-                <li>
-                    <router-link
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'BrowsePetiteRestauration'}">
-                        Petite restauration
-                    </router-link>
-                </li>
-                <li>
-                    <router-link
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'BrowseSauces'}">
-                        Sauces
-                    </router-link>
-                </li>
-                <li>
-                    <router-link
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'BrowseVegetarien'}">
-                        Végétarien
-                    </router-link>
-                </li>
-                <li>
-                    <router-link
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'BrowseSofts'}">
-                        Softs
-                    </router-link>
-                </li>
-                <li>
-                    <router-link
-                    class="inline-block rounded bg-[#234b90] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]" 
-                    :to="{name: 'BrowseAlcools'}">
-                        Bières/Vin
-                    </router-link>
-                </li>
-            </ul>
-        </div>
-        <router-view v-if="$route.matched.length"></router-view>
-    </section>
-</template>
+<script setup>
+import { nextTick, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 
-<script>
-export default {
-  name: 'BrowseMenu',
-};
+const categories = [
+  { label: 'Frites', route: 'BrowseFrites' },
+  { label: 'Hamburgers', route: 'BrowseHamburgers' },
+  { label: 'Mitraillettes', route: 'Browsemitraillettes' },
+  { label: 'Brochettes', route: 'BrowseBrochettes' },
+  { label: 'Snacks', route: 'BrowseSnacks' },
+  { label: 'Petite restauration', route: 'BrowsePetiteRestauration' },
+  { label: 'Sauces', route: 'BrowseSauces' },
+  { label: 'Végétarien', route: 'BrowseVegetarien' },
+  { label: 'Softs', route: 'BrowseSofts' },
+  { label: 'Bières/Vin', route: 'BrowseAlcools' },
+];
+
+const route = useRoute();
+const nav = ref(null);
+
+// Keep the selected category visible when the tab bar overflows (mobile).
+watch(
+  () => route.name,
+  async () => {
+    await nextTick();
+    const list = nav.value;
+    const active = list?.querySelector('[aria-current="page"]');
+    if (!active) return;
+    // Scroll the tab bar only; scrollIntoView would also scroll the page.
+    list.scrollTo({
+      left: active.offsetLeft - (list.clientWidth - active.offsetWidth) / 2,
+      behavior: 'smooth',
+    });
+  },
+  { immediate: true },
+);
 </script>
 
-<style scoped>
-.router-link-active {
-    @apply bg-[#922028];
-    @apply shadow-[0_4px_9px_-4px_#922028]
-}
-</style>
+<template>
+  <section id="carte" class="bg-gray-200 min-h-screen min-w-fit">
+    <nav
+      aria-label="Catégories de la carte"
+      class="sticky top-0 z-10 bg-gray-200/95 backdrop-blur border-b border-gray-300"
+    >
+      <ul
+        ref="nav"
+        class="relative flex w-0 min-w-full gap-2 overflow-x-auto px-4 py-3 snap-x scroll-px-4 md:flex-wrap md:justify-center md:overflow-visible"
+      >
+        <li v-for="category in categories" :key="category.route" class="snap-start shrink-0">
+          <router-link
+            :to="{ name: category.route }"
+            active-class="!bg-burgundy !border-burgundy shadow-md"
+            class="group block rounded-full border border-[#234b90] bg-[#234b90] px-5 py-2.5 text-md text-white whitespace-nowrap transition duration-150 ease-in-out"
+          >
+            <span class="inline-block transition-transform duration-150 ease-out group-hover:scale-110 motion-reduce:transform-none">
+              {{ category.label }}
+            </span>
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+
+    <router-view v-if="$route.matched.length > 1"></router-view>
+    <p v-else class="px-4 py-16 text-center text-gray-500">
+      Choisissez une catégorie pour découvrir la carte.
+    </p>
+  </section>
+</template>
