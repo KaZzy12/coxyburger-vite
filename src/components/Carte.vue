@@ -53,7 +53,9 @@ watch(
             active-class="!bg-burgundy !border-burgundy shadow-md"
             class="group block rounded-full border border-[#234b90] bg-[#234b90] px-5 py-2.5 text-md text-white whitespace-nowrap transition duration-150 ease-in-out"
           >
-            <span class="inline-block transition-transform duration-150 ease-out group-hover:scale-110 motion-reduce:transform-none">
+            <span
+              class="inline-block transition-transform duration-150 ease-out group-hover:scale-110 motion-reduce:transform-none"
+            >
               {{ category.label }}
             </span>
           </router-link>

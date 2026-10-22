@@ -4,13 +4,13 @@ import NavigationBar from './components/NavigationBar.vue';
 </script>
 
 <template>
-  <div class ="header">
-    <TopBar/>
-    <NavigationBar/>
+  <div class="header">
+    <TopBar />
+    <NavigationBar />
   </div>
   <div class="container">
     <main>
-      <router-view/>
+      <router-view />
     </main>
   </div>
 </template>

@@ -8,15 +8,20 @@
       alt=""
       class="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center] md:object-center"
       fetchpriority="high"
-    >
+    />
     <div
       class="absolute inset-0 -z-10 bg-gradient-to-t from-black/85 via-black/55 to-black/25 md:bg-gradient-to-r md:from-black/80 md:via-black/50 md:to-black/10"
       aria-hidden="true"
     ></div>
 
-    <div class="mx-auto flex w-full max-w-screen-xl items-end px-4 pb-12 pt-24 md:items-center md:pb-24 md:pt-24">
+    <div
+      class="mx-auto flex w-full max-w-screen-xl items-end px-4 pb-12 pt-24 md:items-center md:pb-24 md:pt-24"
+    >
       <div class="max-w-2xl text-white">
-        <h1 id="home-title" class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+        <h1
+          id="home-title"
+          class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+        >
           <span class="block">Bienvenue chez Coxyburger,</span>
           <span class="mt-2 block font-normal text-white/90 lg:mt-3">
             là où la gourmandise prend tout son sens.

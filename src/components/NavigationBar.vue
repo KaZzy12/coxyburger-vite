@@ -41,7 +41,10 @@ watch(isMenuOpen, (open) => {
   document.body.classList.toggle('overflow-hidden', open);
 });
 
-watch(() => route.fullPath, () => closeMenu());
+watch(
+  () => route.fullPath,
+  () => closeMenu(),
+);
 
 onMounted(() => {
   window.addEventListener('keydown', onKeydown);
@@ -57,17 +60,29 @@ onBeforeUnmount(() => {
 
 <template>
   <header class="relative z-20 border-b-[6px] border-burgundy bg-[#234b90] text-white shadow-md">
-    <div class="mx-auto flex h-20 max-w-screen-xl items-center justify-between gap-4 px-4 md:h-[100px]">
+    <div
+      class="mx-auto flex h-20 max-w-screen-xl items-center justify-between gap-4 px-4 md:h-[100px]"
+    >
       <!-- Left: brand -->
       <router-link
         :to="{ name: 'Home' }"
         class="flex items-center gap-2 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:gap-4"
         aria-label="Coxyburger - Accueil"
       >
-        <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white p-1 shadow-lg ring-4 ring-burgundy md:h-[84px] md:w-[84px]">
-          <img class="h-full w-full object-contain" src="../assets/coxyburger-logo.webp" width="256" height="251" alt="">
+        <span
+          class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white p-1 shadow-lg ring-4 ring-burgundy md:h-[84px] md:w-[84px]"
+        >
+          <img
+            class="h-full w-full object-contain"
+            src="../assets/coxyburger-logo.webp"
+            width="256"
+            height="251"
+            alt=""
+          />
         </span>
-        <span class="text-xl font-extrabold uppercase leading-none tracking-wider !text-white sm:text-2xl md:text-3xl">
+        <span
+          class="text-xl font-extrabold uppercase leading-none tracking-wider !text-white sm:text-2xl md:text-3xl"
+        >
           Coxyburger
         </span>
       </router-link>
@@ -83,7 +98,15 @@ onBeforeUnmount(() => {
           :aria-expanded="isMenuOpen"
           @click="openMenu"
         >
-          <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <svg
+            class="h-7 w-7"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
@@ -110,7 +133,11 @@ onBeforeUnmount(() => {
       enter-from-class="opacity-0"
       leave-to-class="opacity-0"
     >
-      <div v-if="isMenuOpen" class="fixed inset-0 z-50 bg-black/60 md:hidden" @click="closeMenu({ restoreFocus: true })"></div>
+      <div
+        v-if="isMenuOpen"
+        class="fixed inset-0 z-50 bg-black/60 md:hidden"
+        @click="closeMenu({ restoreFocus: true })"
+      ></div>
     </Transition>
     <Transition
       enter-active-class="transition-transform duration-200 ease-out motion-reduce:transition-none"
@@ -135,7 +162,15 @@ onBeforeUnmount(() => {
             aria-label="Fermer le menu"
             @click="closeMenu({ restoreFocus: true })"
           >
-            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <svg
+              class="h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
               <path d="M6 6l12 12M18 6L6 18" />
             </svg>
           </button>
@@ -159,10 +194,7 @@ onBeforeUnmount(() => {
         </nav>
 
         <div class="mt-auto space-y-4 p-4 text-base text-white/90">
-          <a
-            :href="PHONE_HREF"
-            class="block underline-offset-4 hover:underline"
-          >
+          <a :href="PHONE_HREF" class="block underline-offset-4 hover:underline">
             {{ PHONE_LABEL }}
           </a>
           <a
@@ -171,7 +203,7 @@ onBeforeUnmount(() => {
           >
             Rue du Baron d'Obin 132 - 4219 Wasseiges
           </a>
-          <p>Mardi - Dimanche : 17h30 - 21h<br>Mercredi : 11h30 - 13h30</p>
+          <p>Mardi - Dimanche : 17h30 - 21h<br />Mercredi : 11h30 - 13h30</p>
         </div>
       </aside>
     </Transition>
@@ -190,7 +222,9 @@ onBeforeUnmount(() => {
   border-radius: 9999px;
   background-color: currentColor;
   transform: scaleX(0);
-  transition: transform 200ms ease-out, opacity 200ms ease-out;
+  transition:
+    transform 200ms ease-out,
+    opacity 200ms ease-out;
 }
 
 .nav-link:hover::after {

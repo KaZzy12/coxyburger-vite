@@ -1,8 +1,4 @@
-import {
-  createRouter,
-  createWebHistory,
-} from 'vue-router';
-
+import { createRouter, createWebHistory } from 'vue-router';
 
 import Carte from '../components/Carte.vue';
 import Contact from '../components/Contact.vue';
