@@ -65,7 +65,7 @@ onBeforeUnmount(() => {
         aria-label="Coxyburger - Accueil"
       >
         <span class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white p-1 shadow-lg ring-4 ring-burgundy md:h-[84px] md:w-[84px]">
-          <img class="h-full w-full object-contain" src="../assets/coxyburger.png" alt="">
+          <img class="h-full w-full object-contain" src="../assets/coxyburger-logo.webp" width="256" height="251" alt="">
         </span>
         <span class="text-xl font-extrabold uppercase leading-none tracking-wider !text-white sm:text-2xl md:text-3xl">
           Coxyburger
@@ -93,7 +93,7 @@ onBeforeUnmount(() => {
             <li v-for="link in links" :key="link.label">
               <router-link
                 :to="link.to"
-                class="nav-link relative inline-block py-2 transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                class="nav-link relative inline-block py-2 text-white/75 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
               >
                 {{ link.label }}
               </router-link>
@@ -179,7 +179,8 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.nav-link.router-link-active::after {
+/* Burgundy is as dark as the navbar blue (~1:1), so the indicator is white. */
+.nav-link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -187,7 +188,29 @@ onBeforeUnmount(() => {
   bottom: 0;
   height: 3px;
   border-radius: 9999px;
-  background-color: #922028;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: transform 200ms ease-out, opacity 200ms ease-out;
+}
+
+.nav-link:hover::after {
+  opacity: 0.4;
+  transform: scaleX(1);
+}
+
+.nav-link.router-link-active {
+  color: #fff;
+}
+
+.nav-link.router-link-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link::after {
+    transition: none;
+  }
 }
 
 .drawer-link.router-link-active {
