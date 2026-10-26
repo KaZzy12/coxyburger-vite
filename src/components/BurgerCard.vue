@@ -1,4 +1,6 @@
 <script setup>
+import { formatPrice } from '../shared/format-price';
+
 defineProps({
   burger: {
     type: Object,
@@ -24,10 +26,16 @@ defineProps({
     </div>
 
     <div class="relative px-5 pb-5 pt-2">
-      <div>
-        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+      <div class="mb-2 flex items-baseline justify-between gap-2">
+        <h3 class="text-2xl font-bold tracking-tight text-gray-900">
           {{ burger.name }}
         </h3>
+        <span
+          v-if="burger.price != null"
+          class="whitespace-nowrap text-lg font-bold text-burgundy"
+        >
+          {{ formatPrice(burger.price) }}
+        </span>
       </div>
       <p class="text-sm leading-relaxed text-gray-600">
         {{ burger.description }}

@@ -23,10 +23,7 @@
 </template>
 
 <script>
-const priceFormatter = new Intl.NumberFormat('fr-BE', {
-  style: 'currency',
-  currency: 'EUR',
-});
+import { formatPrice } from '../../shared/format-price';
 
 export default {
   name: 'MenuItemList',
@@ -42,9 +39,7 @@ export default {
     },
   },
   methods: {
-    formatPrice(price) {
-      return priceFormatter.format(price);
-    },
+    formatPrice,
   },
 };
 </script>
