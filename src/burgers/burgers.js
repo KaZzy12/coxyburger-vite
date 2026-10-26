@@ -39,7 +39,8 @@ export const burgers = [
     id: 5,
     name: 'Hugo',
     image: '/images/hugoburger.png',
-    description: 'Hugo',
+    description:
+      'Pain bagnat, viande black Angus 110 g, fromage à raclette, oignons frais cuits, lard et sauce poivre, un duo fondant et fumé qui réchauffe le cœur à chaque bouchée.',
     isVege: false,
     price: 9,
   },
@@ -47,7 +48,8 @@ export const burgers = [
     id: 6,
     name: 'Orval',
     image: '/images/hugoburger.png',
-    description: 'Orval',
+    description:
+      "Pain bagnat, sirop de liège, viande black Angus 110 g, fromage d'Orval, roquette et oignons secs, une recette bénie des moines, à savourer comme une petite communion gourmande.",
     isVege: false,
     price: 8.5,
   },
