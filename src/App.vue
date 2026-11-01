@@ -8,11 +8,9 @@ import NavigationBar from './components/NavigationBar.vue';
     <TopBar />
     <NavigationBar />
   </div>
-  <div class="container">
-    <main>
-      <router-view />
-    </main>
-  </div>
+  <main>
+    <router-view />
+  </main>
 </template>
 
 <style scoped>
