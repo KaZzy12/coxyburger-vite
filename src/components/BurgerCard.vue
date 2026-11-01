@@ -30,10 +30,7 @@ defineProps({
         <h3 class="text-2xl font-bold tracking-tight text-gray-900">
           {{ burger.name }}
         </h3>
-        <span
-          v-if="burger.price != null"
-          class="whitespace-nowrap text-lg font-bold text-burgundy"
-        >
+        <span v-if="burger.price != null" class="whitespace-nowrap text-lg font-bold text-burgundy">
           {{ formatPrice(burger.price) }}
         </span>
       </div>
