@@ -11,7 +11,6 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "prettier": "^3.9.10",
     "vue": "^3.5.44",
     "vue-router": "^4.6.4"
   },
@@ -19,6 +18,7 @@
     "@vitejs/plugin-vue": "^4.6.2",
     "autoprefixer": "^10.6.1",
     "postcss": "^8.5.31",
+    "prettier": "^3.9.10",
     "tailwindcss": "^3.4.19",
     "vite": "^5.4.21"
   }
