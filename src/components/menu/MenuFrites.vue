@@ -1,17 +1,15 @@
 <template>
-  <div class="mt-5 w-screen">
-    <div v-for="(frite, idx) in frites" :key="idx">
-      <h4 class="text-lg font-bold text-center">{{ frite.name }} | {{ $filters.currency(frite.price) }}</h4>
-    </div>
-  </div>
+  <MenuItemList :items="frites" :cols="1" />
 </template>
 
 <script>
 /* eslint-disable import/no-named-as-default */
 import menu from '../../menu/menu';
+import MenuItemList from './MenuItemList.vue';
 
 export default {
   name: 'MenuFrites',
+  components: { MenuItemList },
   data() {
     return { frites: menu.frites };
   },

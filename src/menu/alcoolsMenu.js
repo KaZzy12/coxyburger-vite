@@ -21,16 +21,11 @@ export const alcoolsMenu = [
   },
   {
     id: 5,
-    name: 'Juliette',
-    price: 4,
-  },
-  {
-    id: 6,
     name: 'Verre de vin (rouge/blanc/rosé)',
     price: 2.5,
   },
   {
-    id: 7,
+    id: 6,
     name: 'Bouteille de vin',
     price: 14,
   },

@@ -4,28 +4,11 @@ import NavigationBar from './components/NavigationBar.vue';
 </script>
 
 <template>
-  <div class ="header">
-    <TopBar/>
-    <NavigationBar/>
+  <div class="header">
+    <TopBar />
+    <NavigationBar />
   </div>
-  <div class="container">
-    <main>
-      <router-view/>
-    </main>
-  </div>
+  <main>
+    <router-view />
+  </main>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
