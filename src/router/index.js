@@ -96,5 +96,10 @@ export default createRouter({
       name: 'Contact',
       component: Contact,
     },
+    {
+      // Unknown URLs go back to the home page instead of a blank view.
+      path: '/:pathMatch(.*)*',
+      redirect: { name: 'Home' },
+    },
   ],
 });
