@@ -36,13 +36,3 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      locationUrl: 'https://maps.app.goo.gl/aLX5KuAphy4vmi5M8',
-    };
-  },
-};
-</script>
