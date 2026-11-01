@@ -4,7 +4,7 @@
     aria-labelledby="home-title"
   >
     <img
-      src="/images/homeimage.jpg"
+      src="/images/homeimage.webp"
       alt=""
       class="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center] md:object-center"
       fetchpriority="high"

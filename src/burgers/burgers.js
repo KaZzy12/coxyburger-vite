@@ -18,7 +18,7 @@ export const burgers = [
   {
     id: 3,
     name: 'Cotchia',
-    image: '/images/cotchia.png',
+    image: '/images/cotchia.webp',
     description:
       'Pain bagnat, hamburger de poisson, sauce cotchia au safran, une fusion délicate de saveurs marines et exotiques.',
     price: 9,

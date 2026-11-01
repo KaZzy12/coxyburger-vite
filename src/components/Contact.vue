@@ -2,7 +2,7 @@
   <section
     id="contact"
     class="flex min-h-[calc(100svh-86px)] w-full items-center justify-center bg-cover bg-center px-4 py-8 md:min-h-[calc(100svh-106px)] lg:min-h-[calc(100svh-138px)] lg:bg-left-top"
-    style="background-image: url(/images/batiment.JPG)"
+    style="background-image: url(/images/batiment.webp)"
   >
     <div class="flex w-full flex-col items-center justify-center">
       <div
