@@ -14,7 +14,6 @@ import MenuSauces from '../components/menu/MenuSauces.vue';
 import MenuSnacks from '../components/menu/MenuSnacks.vue';
 import MenuSofts from '../components/menu/MenuSofts.vue';
 import MenuVegetarien from '../components/menu/MenuVegetarien.vue';
-import Test from '../components/Test.vue';
 
 export default createRouter({
   history: createWebHistory(),
@@ -23,12 +22,6 @@ export default createRouter({
       path: '/',
       name: 'Home',
       component: Home,
-    },
-
-    {
-      path: '/test',
-      name: 'Test',
-      component: Test,
     },
     {
       path: '/carte',
