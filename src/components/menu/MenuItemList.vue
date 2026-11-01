@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen flex justify-center px-2">
+  <div class="w-full flex justify-center px-2">
     <div class="mt-5 w-full max-w-4xl rounded-lg border-2 border-burgundy bg-white p-4 shadow-md">
       <ul
         class="grid grid-cols-1 gap-x-10 gap-y-2 md:[grid-template-columns:repeat(var(--cols),minmax(0,1fr))]"
