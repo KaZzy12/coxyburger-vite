@@ -47,7 +47,7 @@ export const burgers = [
   {
     id: 6,
     name: 'Orval',
-    image: '/images/hugoburger.png',
+    image: '/images/orval.webp',
     description:
       "Pain bagnat, sirop de liège, viande black Angus 110 g, fromage d'Orval, roquette et oignons secs, une recette bénie des moines, à savourer comme une petite communion gourmande.",
     isVege: false,
