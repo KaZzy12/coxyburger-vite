@@ -38,7 +38,10 @@ watch(
 </script>
 
 <template>
-  <section id="carte" class="bg-gray-200 min-h-screen min-w-fit">
+  <section
+    id="carte"
+    class="bg-gray-200 min-w-fit min-h-[calc(100svh-86px)] md:min-h-[calc(100svh-106px)] lg:min-h-[calc(100svh-138px)]"
+  >
     <nav
       aria-label="Catégories de la carte"
       class="sticky top-0 z-10 bg-gray-200/95 backdrop-blur border-b border-gray-300"
