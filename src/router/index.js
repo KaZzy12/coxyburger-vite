@@ -81,8 +81,13 @@ export default createRouter({
         },
         {
           name: 'BrowseVegetarien',
-          path: 'vegetatien',
+          path: 'vegetarien',
           component: MenuVegetarien,
+        },
+        {
+          // Old URL had a typo; keep it working for existing links.
+          path: 'vegetatien',
+          redirect: { name: 'BrowseVegetarien' },
         },
       ],
     },
