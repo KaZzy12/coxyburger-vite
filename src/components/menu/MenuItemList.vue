@@ -8,11 +8,11 @@
         <li
           v-for="item in items"
           :key="item.id ?? item.name"
-          class="flex items-baseline gap-2 text-lg"
+          class="flex items-baseline gap-2 text-lg [align-items:last_baseline]"
         >
           <span class="font-semibold">{{ item.name }}</span>
           <span
-            class="flex-1 translate-y-[-0.05em] border-b-2 border-dotted border-gray-400"
+            class="min-w-4 flex-1 translate-y-[-0.05em] border-b-2 border-dotted border-gray-400"
             aria-hidden="true"
           ></span>
           <span class="font-bold whitespace-nowrap">{{ formatPrice(item.price) }}</span>
