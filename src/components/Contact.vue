@@ -1,12 +1,12 @@
 <template>
   <section
     id="contact"
-    class="-z-50 -mt-[104px] lg:-mt-[136px] bg-cover bg-center lg:bg-left-top h-screen w-screen"
-    style="background-image: url(images/batiment.JPG)"
+    class="flex min-h-[calc(100svh-86px)] w-full items-center justify-center bg-cover bg-center px-4 py-8 md:min-h-[calc(100svh-106px)] lg:min-h-[calc(100svh-138px)] lg:bg-left-top"
+    style="background-image: url(/images/batiment.JPG)"
   >
-    <div class="h-full w-full flex flex-col items-center justify-center">
+    <div class="flex w-full flex-col items-center justify-center">
       <div
-        class="absolute max-w-[90vw] px-8 py-6 md:px-12 md:py-8 flex flex-col gap-4 text-center rounded-2xl bg-white/60 backdrop-blur-md border-2 border-white/80 ring-1 ring-black/10 shadow-2xl"
+        class="max-w-full px-8 py-6 md:px-12 md:py-8 flex flex-col gap-4 text-center rounded-2xl bg-white/60 backdrop-blur-md border-2 border-white/80 ring-1 ring-black/10 shadow-2xl"
       >
         <h3 class="text-3xl font-bold">Coxyburger</h3>
         <div class="text-lg">
