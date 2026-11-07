@@ -10,7 +10,7 @@ export const burgers = [
   {
     id: 2,
     name: 'Karmann',
-    image: '/images/karmannburger.png',
+    image: '/images/karmann.webp',
     description:
       'Viande Angus, bacon, pain bagnat, un festival de goûts premium, une délectation assurée à chaque dégustation.',
     price: 8.5,
