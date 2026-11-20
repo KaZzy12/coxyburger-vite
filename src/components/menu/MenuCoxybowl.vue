@@ -8,7 +8,7 @@
           class="flex flex-col rounded-lg border-2 border-burgundy bg-white p-4 shadow-md"
         >
           <header class="flex items-baseline gap-2 text-xl">
-            <h2 class="font-extrabold uppercase">Coxybowl {{ bowl.name }}</h2>
+            <h3 class="font-bold">Coxybowl {{ bowl.name }}</h3>
             <span
               class="min-w-4 flex-1 translate-y-[-0.05em] border-b-2 border-dotted border-gray-400"
               aria-hidden="true"
@@ -18,7 +18,7 @@
             </span>
           </header>
 
-          <ul class="mt-3 space-y-3 text-lg">
+          <ul class="mt-5 space-y-3 text-lg">
             <li>
               <span class="font-semibold">{{ bowl.fries }}</span>
             </li>
@@ -37,13 +37,15 @@
       </div>
 
       <section class="mt-5 rounded-lg border-2 border-burgundy bg-white p-4 shadow-md">
-        <h2 class="text-xl font-extrabold uppercase">Suppléments</h2>
-        <p class="text-gray-600">{{ formatPrice(coxybowl.supplements.price) }} par ingrédient</p>
-        <ul class="mt-2 grid grid-cols-1 gap-x-10 gap-y-2 md:grid-cols-3">
+        <h3 class="text-xl font-bold">Suppléments</h3>
+        <p class="mt-1 text-gray-600">
+          {{ formatPrice(coxybowl.supplements.price) }} par ingrédient
+        </p>
+        <ul class="mt-4 grid grid-cols-1 gap-x-10 gap-y-2 md:grid-cols-3">
           <li
             v-for="item in coxybowl.supplements.items"
             :key="item"
-            class="flex items-baseline gap-2 text-lg [align-items:last_baseline]"
+            class="flex items-baseline gap-2 text-lg"
           >
             <span class="font-semibold">{{ item }}</span>
             <span
