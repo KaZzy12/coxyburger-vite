@@ -66,28 +66,48 @@ export const snacksMenu = [
   },
   {
     id: 14,
+    name: 'Mini Lucifer',
+    price: 5,
+  },
+  {
+    id: 15,
     name: 'Cheese crack',
     price: 3.5,
   },
   {
-    id: 15,
+    id: 16,
     name: 'Loempia',
     price: 5.5,
   },
   {
-    id: 16,
+    id: 17,
     name: 'Mini loempia',
     price: 3.8,
   },
   {
-    id: 17,
+    id: 18,
     name: 'Frikandel XXL',
     price: 5,
   },
   {
-    id: 18,
+    id: 19,
     name: 'Nuggets',
     price: 4.5,
+  },
+  {
+    id: 20,
+    name: 'Top mix',
+    price: 5.1,
+  },
+  {
+    id: 21,
+    name: 'Tenders poulet',
+    price: 4,
+  },
+  {
+    id: 22,
+    name: 'Saucisse sèche',
+    price: 3,
   },
 ];
 

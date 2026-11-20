@@ -34,6 +34,36 @@ export const vegetarienMenu = [
     name: 'Hamburger',
     price: 8.5,
   },
+  {
+    id: 8,
+    name: 'Mini loempias',
+    price: 3.8,
+  },
+  {
+    id: 9,
+    name: 'Cheese crack',
+    price: 3.5,
+  },
+  {
+    id: 10,
+    name: 'Croquette de fromage',
+    price: 3.5,
+  },
+  {
+    id: 11,
+    name: 'Boulettes Old Amsterdam',
+    price: 4.6,
+  },
+  {
+    id: 12,
+    name: 'Stick mozzarella',
+    price: 3.5,
+  },
+  {
+    id: 13,
+    name: 'Chilli cheese',
+    price: 5,
+  },
 ];
 
 export default vegetarienMenu;

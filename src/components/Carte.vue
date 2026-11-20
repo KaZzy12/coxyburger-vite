@@ -5,6 +5,7 @@ import { useRoute } from 'vue-router';
 const categories = [
   { label: 'Hamburgers spéciaux', route: 'BrowseHamburgersSpeciaux' },
   { label: 'Frites', route: 'BrowseFrites' },
+  { label: 'Coxybowl', route: 'BrowseCoxybowl' },
   { label: 'Hamburgers', route: 'BrowseHamburgers' },
   { label: 'Mitraillettes', route: 'Browsemitraillettes' },
   { label: 'Brochettes', route: 'BrowseBrochettes' },

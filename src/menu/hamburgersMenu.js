@@ -26,16 +26,11 @@ export const hamburgersMenu = [
   },
   {
     id: 6,
-    name: 'Poulet frit',
-    price: 8.5,
-  },
-  {
-    id: 7,
     name: 'Crispy-chicken',
     price: 7.5,
   },
   {
-    id: 8,
+    id: 7,
     name: 'Supplément crudités/fromage',
     price: 0.5,
   },

@@ -36,7 +36,7 @@ export const brochettesMenu = [
   },
   {
     id: 8,
-    name: 'Poivron',
+    name: 'Ambiorix',
     price: 5,
   },
 ];

@@ -4,7 +4,7 @@ export const burgers = [
     name: 'Combi',
     image: '/images/combiburger.png',
     description:
-      'Deux viandes Angus, pain bagnat, une symphonie de saveurs entre chaque bouchée, une expérience inoubliable.',
+      'Deux viandes 66g, pain bagnat, une symphonie de saveurs entre chaque bouchée, une expérience inoubliable.',
     price: 9,
   },
   {
@@ -46,6 +46,13 @@ export const burgers = [
     description:
       "Pain bagnat, sirop de liège, viande black Angus 110 g, fromage d'Orval, roquette et oignons secs, une recette bénie des moines, à savourer comme une petite communion gourmande.",
     price: 8.5,
+  },
+  {
+    id: 7,
+    name: '411',
+    image: '/images/newburger.png',
+    description: 'Description of the new burger.',
+    price: 9,
   },
 ];
 export default burgers;

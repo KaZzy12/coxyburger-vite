@@ -121,11 +121,31 @@ export const saucesMenu = [
   },
   {
     id: 25,
+    name: 'Américaine douce',
+    price: 1,
+  },
+  {
+    id: 26,
+    name: 'Tosca',
+    price: 1,
+  },
+  {
+    id: 27,
+    name: 'Algérienne',
+    price: 1,
+  },
+  {
+    id: 28,
+    name: 'Sauce provençale',
+    price: 1,
+  },
+  {
+    id: 29,
     name: 'Tomate',
     price: 1.2,
   },
   {
-    id: 26,
+    id: 30,
     name: 'Liègoise',
     price: 1.2,
   },

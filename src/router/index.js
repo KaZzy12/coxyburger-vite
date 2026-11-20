@@ -5,6 +5,7 @@ import Contact from '../components/Contact.vue';
 import Home from '../components/Home.vue';
 import MenuAlcools from '../components/menu/MenuAlcools.vue';
 import MenuBrochettes from '../components/menu/MenuBrochettes.vue';
+import MenuCoxybowl from '../components/menu/MenuCoxybowl.vue';
 import MenuFrites from '../components/menu/MenuFrites.vue';
 import MenuHamburgers from '../components/menu/MenuHamburgers.vue';
 import MenuHamburgersSpeciaux from '../components/menu/MenuHamburgersSpeciaux.vue';
@@ -43,6 +44,11 @@ export default createRouter({
           name: 'BrowseBrochettes',
           path: 'brochettes',
           component: MenuBrochettes,
+        },
+        {
+          name: 'BrowseCoxybowl',
+          path: 'coxybowl',
+          component: MenuCoxybowl,
         },
         {
           name: 'BrowseFrites',

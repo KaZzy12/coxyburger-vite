@@ -44,6 +44,16 @@ export const petiteRestaurationMenu = [
     name: 'Portion vol-au-vent',
     price: 13,
   },
+  {
+    id: 10,
+    name: 'Portion 1 boulette provençale',
+    price: 10.2,
+  },
+  {
+    id: 11,
+    name: 'Portion 2 boulettes provençale',
+    price: 17.2,
+  },
 ];
 
 export default petiteRestaurationMenu;

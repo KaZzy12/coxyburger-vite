@@ -1,6 +1,7 @@
 /* eslint-disable import/no-named-as-default */
 import alcoolsMenu from './alcoolsMenu';
 import brochettesMenu from './brochettesMenu';
+import coxybowlMenu from './coxybowlMenu';
 import fritesMenu from './fritesMenu';
 import hamburgersMenu from './hamburgersMenu';
 import mitraillettesMenu from './mitraillettesMenu';
@@ -15,6 +16,7 @@ export const menu = {
   hamburgers: hamburgersMenu,
   mitraillettes: mitraillettesMenu,
   brochettes: brochettesMenu,
+  coxybowl: coxybowlMenu,
   snacks: snacksMenu,
   petiteRestauration: petiteRestaurationMenu,
   sauces: saucesMenu,
